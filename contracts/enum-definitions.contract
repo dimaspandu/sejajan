@@ -1,0 +1,11 @@
+// PatunganStatus
+active | completed | expired
+
+// ContributionStatus
+pending | paid | refunded
+
+// TransactionType
+payment | refund
+
+// TransactionStatus
+success | failed
