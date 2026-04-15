@@ -1,0 +1,25 @@
+@use "./styles/variables" as *;
+
+body {
+  margin: 0;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  background: $bg;
+  color: $text-dark;
+}
+
+button,
+input,
+select,
+textarea {
+  font: inherit;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Nunito Sans", sans-serif;
+  margin: 0;
+  line-height: 1.25;
+}

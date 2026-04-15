@@ -1,0 +1,18 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 1.875rem;
+  color: #777;
+  font-size: 1rem;
+}
+
+.footer span {
+  cursor: pointer;
+}
+
+.footer span:hover {
+  color: #333;
+}

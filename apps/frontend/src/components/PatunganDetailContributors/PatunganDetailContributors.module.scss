@@ -1,0 +1,27 @@
+.contributorsSection {
+  margin-top: 2.5rem;
+  padding: 1.5rem;
+  background: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0.625rem 1.5rem rgba(0, 0, 0, 0.08);
+}
+
+.heading {
+  margin: 0 0 0.625rem 0;
+  font-size: 1.25rem;
+  color: #333;
+}
+
+.contributorsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(13.75rem, 1fr));
+  gap: 0.75rem;
+  margin-top: 0.875rem;
+}
+
+@media (max-width: 40rem) {
+  .contributorsSection {
+    margin-top: 2rem;
+    padding: 1.25rem;
+  }
+}
