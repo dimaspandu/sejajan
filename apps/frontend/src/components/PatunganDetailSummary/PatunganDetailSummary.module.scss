@@ -1,34 +1,38 @@
 .summarySection {
   margin-top: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .summaryCard {
   display: grid;
-  grid-template-columns: minmax(15rem, 18rem) minmax(0, 1fr);
+  grid-template-columns: minmax(15rem, 17.5rem) minmax(0, 1fr);
   align-items: center;
-  gap: 2rem;
-  padding: 1.5rem;
+  gap: 2.25rem;
+  width: 100%;
+  padding: 1.9rem 1.8rem;
   background: #fff;
-  border-radius: 1rem;
-  box-shadow: 0 0.625rem 1.5rem rgba(0, 0, 0, 0.08);
+  border-radius: 1.25rem;
+  box-shadow: 0 1rem 2.2rem rgba(214, 155, 86, 0.16);
 }
 
 .mediaPanel {
-  min-height: 13rem;
-  padding: 1.25rem 1rem;
+  min-height: 15.5rem;
+  padding: 1.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: radial-gradient(circle at 28% 30%, #f7fbff, #deedf6);
-  border-radius: 2rem 4.5rem 2rem 2rem;
+  background: radial-gradient(circle at 30% 30%, #faf8f5, #ede2d6);
+  border-radius: 2rem;
 }
 
 .mediaImage {
-  width: min(100%, 15.5rem);
+  width: min(100%, 15rem);
   aspect-ratio: 1 / 1;
   object-fit: cover;
   border-radius: 50%;
-  box-shadow: 0 0.75rem 1.25rem rgba(0, 0, 0, 0.16);
+  box-shadow: 0 1rem 1.8rem rgba(125, 86, 42, 0.18);
 }
 
 .contentPanel {
@@ -42,8 +46,14 @@
   color: #333;
 }
 
+.organizerLine {
+  margin: 0.45rem 0 0;
+  font-size: 1rem;
+  color: #6f6257;
+}
+
 .fundTarget {
-  margin-top: 1rem;
+  margin-top: 1.35rem;
 }
 
 .targetLabel {
@@ -71,7 +81,7 @@
 }
 
 .fundProgressBlock {
-  margin-top: 0.7rem;
+  margin-top: 0.9rem;
 }
 
 .fundProgressText {
@@ -89,21 +99,27 @@
 
 .fundProgressValue {
   font-weight: 700;
-  color: #6f6f6f;
+  font-size: 2rem;
+  color: #d77a2c;
+  line-height: 1;
 }
 
 .targetValue {
-  margin-top: 0.45rem;
+  margin-top: 0.2rem;
   font-size: 1.05rem;
-  font-weight: 700;
-  color: #7b7b7b;
+  font-weight: 600;
+  color: #8d7e72;
+}
+
+.progressWrap {
+  position: relative;
+  margin-top: 1.1rem;
 }
 
 .progressTrack {
   width: 100%;
-  height: 0.5rem;
-  margin-top: 1rem;
-  background: #efefef;
+  height: 0.4rem;
+  background: #f1dfcb;
   border-radius: 999rem;
   overflow: hidden;
 }
@@ -112,28 +128,88 @@
   width: 55%;
   height: 100%;
   border-radius: 999rem;
-  background: linear-gradient(90deg, #f7b25f, #f59a4f);
+  background: linear-gradient(90deg, #f7b25f, #e38f3d);
+}
+
+.avatarCluster {
+  position: absolute;
+  top: 50%;
+  left: calc(55% - 2rem);
+  display: flex;
+  align-items: center;
+  padding: 0.2rem 0.35rem;
+  background: rgba(255, 248, 240, 0.96);
+  border: 0.0625rem solid rgba(236, 177, 116, 0.5);
+  border-radius: 999rem;
+  box-shadow: 0 0.4rem 1rem rgba(215, 122, 44, 0.18);
+  transform: translateY(-50%);
+}
+
+.avatarBadge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  margin-left: -0.2rem;
+  border: 0.125rem solid #fff8f0;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #f7c88c, #e89254);
+  color: #6f3c14;
+  font-size: 0.55rem;
+  font-weight: 800;
+}
+
+.avatarBadge:first-child {
+  margin-left: 0;
 }
 
 .summaryMeta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem 1.5rem;
-  margin-top: 0.8rem;
+  margin-top: 1rem;
   font-size: 1rem;
-  color: #8a8a8a;
+  color: #5d4e42;
+}
+
+.metaItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.metaIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  background: #f8eadb;
+  position: relative;
+}
+
+.metaIcon::before {
+  content: "";
+  width: 0.42rem;
+  height: 0.42rem;
+  border-radius: 50%;
+  background: #8f5c2d;
+  box-shadow: 0 0 0 0.14rem rgba(143, 92, 45, 0.2);
 }
 
 .joinButton {
   margin-top: 1.6rem;
-  padding: 0.9rem 1.4rem;
+  min-width: 14rem;
+  padding: 1rem 1.6rem;
   border: none;
-  border-radius: 0.75rem;
-  background: linear-gradient(90deg, #f5a253, #ea8743);
+  border-radius: 0.95rem;
+  background: linear-gradient(180deg, #ce6a1b, #b6550f);
   color: #fff;
   font-size: 1.125rem;
   font-weight: 800;
-  box-shadow: 0 0.5rem 1rem rgba(234, 135, 67, 0.3);
+  box-shadow: 0 0.7rem 1.3rem rgba(194, 95, 20, 0.28);
   cursor: pointer;
   transition: transform 0.2s ease, opacity 0.2s ease;
 }
@@ -143,18 +219,24 @@
   opacity: 0.95;
 }
 
+@media (max-width: 73.125rem) {
+  .summaryCard {
+    border-radius: 0;
+  }
+}
+
 @media (min-width: 64rem) {
   .summaryCard {
-    grid-template-columns: minmax(17rem, 20rem) minmax(0, 1fr);
+    grid-template-columns: minmax(17rem, 18.5rem) minmax(0, 1fr);
     gap: 2.25rem;
   }
 
   .mediaPanel {
-    min-height: 14.25rem;
+    min-height: 16.5rem;
   }
 
   .mediaImage {
-    width: min(100%, 17rem);
+    width: min(100%, 15.75rem);
   }
 
   .title {
@@ -171,6 +253,10 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .avatarCluster {
+    left: calc(50% - 2rem);
+  }
 }
 
 @media (max-width: 40rem) {
@@ -184,7 +270,7 @@
 
   .mediaPanel {
     min-height: 11.5rem;
-    border-radius: 1.5rem 3rem 1.5rem 1.5rem;
+    border-radius: 1.5rem;
   }
 
   .mediaImage {
@@ -199,7 +285,17 @@
     font-size: 1.2rem;
   }
 
+  .fundProgressValue {
+    font-size: 1.7rem;
+  }
+
+  .summaryMeta {
+    gap: 0.7rem;
+    font-size: 0.95rem;
+  }
+
   .joinButton {
     width: 100%;
+    min-width: auto;
   }
 }

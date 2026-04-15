@@ -1,8 +1,10 @@
+import { For } from "solid-js";
 import ContributorCard, { type Contributor } from "~/components/ContributorCard";
 import styles from "./PatunganDetailContributors.module.scss";
 
 type PatunganDetailContributorsProps = {
   contributors: Contributor[];
+  title: string;
 };
 
 export default function PatunganDetailContributors(
@@ -10,14 +12,17 @@ export default function PatunganDetailContributors(
 ) {
   return (
     <section class={styles.contributorsSection}>
-      <h3 class={styles.heading}>
-        Daftar Penyetor ({props.contributors.length} orang)
-      </h3>
+      <div class={styles.headerRow}>
+        <h3 class={styles.heading}>
+          {props.title} ({props.contributors.length} orang)
+        </h3>
+        <span class={styles.liveBadge}>Aktif</span>
+      </div>
 
       <div class={styles.contributorsGrid}>
-        {props.contributors.map((contributor) => (
-          <ContributorCard user={contributor} />
-        ))}
+        <For each={props.contributors}>
+          {(contributor) => <ContributorCard user={contributor} />}
+        </For>
       </div>
     </section>
   );

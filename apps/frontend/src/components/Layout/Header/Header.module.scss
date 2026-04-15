@@ -26,11 +26,17 @@
   gap: 1rem;
 }
 
-.navLeft a {
+.navLink {
   cursor: pointer;
   font-size: 1rem;
   font-weight: 600;
   color: #333;
+  text-decoration: none;
+}
+
+.navLink:hover,
+.navLink[aria-current="page"] {
+  color: #b6550f;
 }
 
 .navRight {
@@ -108,10 +114,16 @@
   box-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.08);
 }
 
-.mobileMenu a {
+.mobileNavLink {
   font-size: 1.05rem;
   font-weight: 600;
   color: #333;
+  text-decoration: none;
+}
+
+.mobileNavLink:hover,
+.mobileNavLink[aria-current="page"] {
+  color: #b6550f;
 }
 
 .mobileMenu .authButton {

@@ -1,16 +1,24 @@
+import { A } from "@solidjs/router";
 import { createSignal } from "solid-js";
 import styles from "./Header.module.scss";
 
 export default function Header() {
   const [open, setOpen] = createSignal(false);
+  const navItems = [
+    { href: "/", label: "Home" },
+    { href: "/patungan", label: "Discover" },
+    { href: "/how-it-works", label: "How It Works" },
+  ];
 
   return (
     <header class={styles.navbar}>
       <div class={styles.navbarInner}>
         <div class={styles.navLeft}>
-          <a>Home</a>
-          <a>Discover</a>
-          <a>How It Works</a>
+          {navItems.map((item) => (
+            <A class={styles.navLink} href={item.href}>
+              {item.label}
+            </A>
+          ))}
         </div>
 
         <div class={styles.navRight}>
@@ -29,9 +37,15 @@ export default function Header() {
 
       {open() && (
         <div class={styles.mobileMenu}>
-          <a>Home</a>
-          <a>Discover</a>
-          <a>How It Works</a>
+          {navItems.map((item) => (
+            <A
+              class={styles.mobileNavLink}
+              href={item.href}
+              onClick={() => setOpen(false)}
+            >
+              {item.label}
+            </A>
+          ))}
           <button class={styles.authButton}>Log In / Sign Up</button>
         </div>
       )}

@@ -30,9 +30,14 @@ export default function Detail() {
         contributors="9/12 orang"
         remainingTime="4 jam"
         ctaLabel="Gabung Patungan Ini!"
+        organizerLine="Dibuka oleh Andi Pratama • Terbuka untuk umum"
+        avatarBadges={["AP", "SR", "BS", "NP", "+5"]}
       />
 
-      <PatunganDetailContributors contributors={users} />
+      <PatunganDetailContributors
+        contributors={users}
+        title="Daftar Penyetor Budiman"
+      />
     </Layout>
   );
 }
