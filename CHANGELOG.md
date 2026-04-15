@@ -1,6 +1,6 @@
 # Changelog
 
-All notable changes to this project will be documented in this file.
+All notable changes to this project are documented in this file.
 
 The format is inspired by Keep a Changelog and follows semantic versioning.
 
@@ -9,16 +9,16 @@ The format is inspired by Keep a Changelog and follows semantic versioning.
 ### Added
 
 - Initial monorepo-style project structure under `apps/`
-- SolidStart frontend app in `apps/frontend`
+- SolidStart frontend application in `apps/frontend`
 - Early backend placeholders under `apps/backend`
 - Reusable UI components for layout, patungan summary, and contributor cards
-- First project changelog
+- Initial project changelog
 
 ### Changed
 
-- Refined homepage and patungan detail page UI
-- Modularized frontend components into self-contained folders
-- Migrated component styling toward CSS Modules and `rem`-based sizing
+- Refined the home page and patungan detail page UI
+- Reorganized frontend components into self-contained folders
+- Migrated styling toward CSS Modules and `rem`-based sizing
 - Applied `Nunito Sans` as the default interface font
 
 ### Notes

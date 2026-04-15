@@ -1,23 +1,23 @@
 # Sejajan
 
-Sejajan adalah aplikasi patungan jajan dengan frontend berbasis SolidStart. Project ini sedang bergerak dari struktur lama ke monorepo `apps/`, dengan fokus saat ini pada pengalaman frontend untuk eksplorasi patungan, detail patungan, dan komponen UI yang lebih rapi serta reusable.
+Sejajan is a group-buying application for shared snack and food orders, with a SolidStart-based frontend. The project is currently transitioning from the older `app/` structure to the newer `apps/` monorepo layout, with the current focus on frontend experience, reusable UI components, and a cleaner project organization.
 
 ## Status
 
-- Versi rilis awal: `1.0.0`
-- Frontend aktif berada di `apps/frontend`
-- Backend berada di `apps/backend` dan masih tahap awal
+- Initial release version: `1.0.0`
+- Active frontend application: `apps/frontend`
+- Backend workspace: `apps/backend`
 
-## Struktur Project
+## Project Structure
 
 ```text
 sejajan/
   apps/
     backend/
-      master/        # Eksperimen service Go
-      mono/          # Eksperimen service PHP
-      transaction/   # Eksperimen service Node.js
-    frontend/        # Aplikasi SolidStart
+      master/        # Early Go service experiment
+      mono/          # Early PHP service experiment
+      transaction/   # Early Node.js service experiment
+    frontend/        # SolidStart frontend application
       public/
       src/
         components/
@@ -35,55 +35,55 @@ sejajan/
 
 ## Frontend Highlights
 
-- Landing page dengan hero section dan daftar patungan
-- Halaman detail patungan dengan summary card dan daftar penyetor
-- Struktur komponen makin modular dengan CSS Module
-- Font default menggunakan `Nunito Sans`
-- Styling sudah dimigrasikan ke unit `rem`
+- Home page with a hero section and patungan listing
+- Patungan detail page with a summary card and contributor list
+- Modular component structure with colocated CSS Modules
+- Default interface font set to `Nunito Sans`
+- Styling migrated to `rem`-based sizing for better consistency
 
-## Menjalankan Frontend
+## Running the Frontend
 
-Masuk ke folder frontend:
+Move into the frontend app:
 
 ```bash
 cd apps/frontend
 ```
 
-Install dependency:
+Install dependencies:
 
 ```bash
 pnpm install
 ```
 
-Jalankan mode development:
+Start the development server:
 
 ```bash
 pnpm run dev
 ```
 
-Build production:
+Build for production:
 
 ```bash
 pnpm run build
 ```
 
-Preview hasil build:
+Preview the production build:
 
 ```bash
 pnpm run preview
 ```
 
-## Scripts Frontend
+## Frontend Scripts
 
-- `pnpm run dev` untuk menjalankan development server
-- `pnpm run build` untuk build production
-- `pnpm run preview` untuk preview hasil build
-- `pnpm run format` untuk format file style di `src`
+- `pnpm run dev` starts the development server
+- `pnpm run build` builds the frontend for production
+- `pnpm run preview` previews the production build
+- `pnpm run format` formats style files inside `src`
 
-## Catatan Backend
+## Backend Notes
 
-Folder `apps/backend` saat ini belum menjadi sistem backend yang final. Isinya masih berupa beberapa pendekatan awal lintas bahasa untuk eksplorasi arsitektur dan implementasi service.
+The `apps/backend` directory is not yet a finalized backend system. It currently contains a few early implementation experiments across multiple languages while the project direction is still being shaped.
 
-## Release
+## Release Notes
 
-Rilis awal project didokumentasikan di `CHANGELOG.md` dengan tag `v1.0.0`.
+The first documented release is recorded in `CHANGELOG.md` under tag `v1.0.0`.
