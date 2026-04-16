@@ -1,0 +1,160 @@
+@use "../../styles/variables" as *;
+
+.homeList {
+  display: grid;
+  grid-template-columns: 1.2fr 0.9fr;
+  gap: 1.1rem;
+  margin-top: 2.5rem;
+}
+
+.homeCard {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem;
+  border: 0.08rem solid rgba(100, 82, 62, 0.12);
+  border-radius: 1.25rem;
+  background: #fff;
+  color: inherit;
+  text-decoration: none;
+  box-shadow: 0 0.9rem 2rem rgba(51, 51, 51, 0.08);
+}
+
+.cardThumb {
+  position: relative;
+  flex: 0 0 10.25rem;
+  width: 10.25rem;
+  height: 9rem;
+  overflow: hidden;
+  border-radius: 1.1rem;
+}
+
+.cardThumb::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+}
+
+.martabak::before {
+  background: linear-gradient(135deg, #dff4fb, #e8f7fb);
+}
+
+.pizza::before {
+  background: linear-gradient(135deg, #fff1d6, #fff8ea);
+}
+
+.foodIllustration {
+  position: absolute;
+  inset: 50% auto auto 50%;
+  transform: translate(-50%, -50%);
+}
+
+.martabak .foodIllustration {
+  width: 6.8rem;
+  height: 6.8rem;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 46%, #f0b35d 0 46%, transparent 47%),
+    radial-gradient(circle at 50% 52%, #b66d2f 0 57%, transparent 58%),
+    radial-gradient(circle at 35% 34%, rgba(255, 255, 255, 0.15) 0 0.5rem, transparent 0.55rem),
+    linear-gradient(180deg, #d88834, #b25b1d);
+  box-shadow: inset 0 0.4rem 0.8rem rgba(255, 211, 140, 0.4);
+}
+
+.pizza .foodIllustration {
+  width: 7.4rem;
+  height: 7.4rem;
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 30% 30%, #c94535 0 0.45rem, transparent 0.48rem),
+    radial-gradient(circle at 66% 28%, #c94535 0 0.48rem, transparent 0.5rem),
+    radial-gradient(circle at 55% 58%, #c94535 0 0.5rem, transparent 0.53rem),
+    radial-gradient(circle at 35% 64%, #c94535 0 0.42rem, transparent 0.45rem),
+    radial-gradient(circle at 50% 50%, #f7cd63 0 72%, #d88735 73% 79%, transparent 80%),
+    linear-gradient(180deg, #ffdf83, #f0ba4d);
+}
+
+.cardBody {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.cardAvatars {
+  display: flex;
+  align-items: center;
+}
+
+.cardAvatars span {
+  width: 1.95rem;
+  height: 1.95rem;
+  margin-right: -0.45rem;
+  border: 0.18rem solid #fff;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #f4d0a8, #c18e57);
+}
+
+.cardAvatars span:nth-child(2) {
+  background: linear-gradient(180deg, #f2d6b6, #8d6440);
+}
+
+.cardAvatars span:nth-child(3) {
+  background: linear-gradient(180deg, #c7e8ff, #68a9d3);
+}
+
+.cardAvatars small {
+  margin-left: 0.7rem;
+  font-size: 0.9rem;
+  color: #5e5e5e;
+}
+
+.cardCopy h2 {
+  font-size: 1.55rem;
+  font-weight: 800;
+}
+
+.cardCopy p {
+  margin: 0.35rem 0 0;
+  color: #5d5d5d;
+  font-size: 1rem;
+}
+
+.cardProgress {
+  height: 0.55rem;
+  overflow: hidden;
+  border-radius: 999px;
+  background: #ececec;
+}
+
+.cardProgress span {
+  display: block;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, #f78f3b, #ffd08b);
+}
+
+.cardBody strong {
+  font-size: 1.03rem;
+  color: #4d453f;
+}
+
+@media (max-width: 62rem) {
+  .homeList {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 48rem) {
+  .homeCard {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cardThumb {
+    width: 100%;
+    flex-basis: 11rem;
+  }
+}
