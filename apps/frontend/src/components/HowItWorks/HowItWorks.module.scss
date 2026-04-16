@@ -75,8 +75,8 @@
   position: relative;
   display: grid;
   place-items: center;
-  width: 6rem;
-  height: 6rem;
+  width: 7rem;
+  height: 7rem;
   border-radius: 50%;
   font-size: 2.2rem;
   box-shadow: inset 0 0.3rem 0.75rem rgba(255, 255, 255, 0.28);
@@ -94,82 +94,10 @@
   background: #d8f4f1;
 }
 
-.stepIcon,
-.stepIcon::before,
-.stepIcon::after {
-  position: absolute;
-  content: "";
-}
-
 .stepIcon {
-  width: 2.6rem;
-  height: 2.6rem;
-}
-
-.person::before {
-  top: 0.05rem;
-  left: 0.82rem;
-  width: 0.95rem;
-  height: 0.95rem;
-  border: 0.16rem solid #49535d;
-  border-radius: 50%;
-}
-
-.person::after {
-  left: 0.45rem;
-  bottom: 0.25rem;
-  width: 1.7rem;
-  height: 1.05rem;
-  border: 0.16rem solid #49535d;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
-  border-bottom: none;
-}
-
-.coin {
-  width: 2rem;
-  height: 2rem;
-  border: 0.18rem solid #56606a;
-  border-radius: 50%;
-}
-
-.coin::before {
-  inset: 0.3rem;
-  border: 0.14rem solid #56606a;
-  border-radius: 50%;
-}
-
-.coin::after {
-  top: 0.5rem;
-  left: 0.76rem;
-  width: 0.4rem;
-  height: 0.72rem;
-  border: 0.15rem solid #56606a;
-  border-top: none;
-  border-bottom: none;
-}
-
-.group::before {
-  top: 0.2rem;
-  left: 0.2rem;
-  width: 0.72rem;
-  height: 0.72rem;
-  border-radius: 50%;
-  background: #57616a;
-  box-shadow:
-    0.74rem 0.12rem 0 #57616a,
-    1.48rem 0 0 #57616a;
-}
-
-.group::after {
-  left: 0.08rem;
-  bottom: 0.25rem;
-  width: 2.25rem;
-  height: 1rem;
-  background:
-    radial-gradient(circle at 18% 100%, #57616a 0 0.58rem, transparent 0.6rem),
-    radial-gradient(circle at 50% 100%, #57616a 0 0.62rem, transparent 0.64rem),
-    radial-gradient(circle at 82% 100%, #57616a 0 0.58rem, transparent 0.6rem);
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
 }
 
 .step p {
